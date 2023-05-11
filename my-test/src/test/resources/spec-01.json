@@ -1,0 +1,14 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "rating": {
+        // match all keys below "rating"
+        "*": {
+          // $ = primary or quality
+          "$": "rating"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "books": [
+    {
+      "title": "JavaScript",
+      "availability": [
+        "online"
+      ]
+    },
+    {
+      "title": "Scala",
+      "availability": [
+        "online",
+        "paperback"
+      ]
+    },
+    {
+      "title": "Java",
+      "availability": [
+        "paperback"
+      ]
+    }
+  ]
+}

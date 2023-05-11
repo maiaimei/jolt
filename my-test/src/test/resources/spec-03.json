@@ -1,0 +1,19 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "rating": {
+        "primary": {
+          "value": "Rating"
+        },
+        // match all keys below "rating", except primary key
+        "*": {
+          // &1 = quality
+          "value": "SecondaryRatings.&1.Value",
+          // $ = quality, & = quality
+          "$": "SecondaryRatings.&.Id"
+        }
+      }
+    }
+  }
+]
