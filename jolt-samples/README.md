@@ -21,17 +21,6 @@ public class ChainrEntry {
 
 copy data from the input tree and put it the output tree
 
-```json
-[
-    {
-        "operation": "shift",
-        "spec": {
-        }
-    }
-]
-
-```
-
 ## Wildcards
 
 LHS，Left Hand Side， input JSON keys
@@ -40,37 +29,20 @@ RHS，Right Hand Side， output data path
 
 ### '\*' Wildcard
 
-Valid only on the LHS ( input JSON keys ) side of a Shiftr Spec.
+用在LHS侧：
 
-用在LHS侧
+- 匹配输入JSON的key，忽略已经被精准匹配过的key。
 
-匹配输入JSON的key，忽略已经被精准匹配过的key。
-
-可以单独使用，也可以用于匹配键的一部分。单独使用时，输入JSON的键值必须具有相同的格式。
+- 可以单独使用，也可以用于匹配键的一部分。
+- 在单独使用时，输入JSON的键值必须具有相同的格式。
 
 ### '&' Wildcard
 
-Valid on the LHS (left hand side - input JSON keys) and RHS (output data path).
+'&' 通配符有两个参数`&(0,1)`，第一个参数表示从当前层级回溯多少级去寻找输入JSON的key，第二个参数表示取第几个匹配到的结果（0表示取整体，1表示取第一个匹配结果，2表示取第二个匹配结果），第二个参数可省略，'&' = '&0' = '&(0)' = '&(0,0)'。
 
-**用在RHS侧？**
+用在LHS侧：
 
-取输入JSON的key
-
-&0=&，当前层级
-
-&1，向上1级
-
-&2，向上2级
-
-```json
-{
-	"foo": {
-		"bar": {
-			"baz": "&0 = baz, &1 = bar, &2 = foo"
-		}
-	}
-}
-```
+用在RHS侧：
 
 ### '$' Wildcard
 

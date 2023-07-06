@@ -5,8 +5,23 @@ import org.junit.jupiter.api.Test;
 public class WildcardsTest extends AbstractTest {
 
   @Test
+  void test_asterisk_fuzzy_matching() {
+    doTest("/wildcards/asterisk-fuzzy-matching.json");
+  }
+
+  @Test
   void test_asterisk_ampersand() {
     doTest("/wildcards/asterisk-ampersand.json");
+  }
+
+  @Test
+  void test_rhs_ampersand() {
+    doTest("/wildcards/rhs-ampersand.json");
+  }
+
+  @Test
+  void test_lhs_ampersand() {
+    doTest("/wildcards/lhs-ampersand.json");
   }
 
   @Test

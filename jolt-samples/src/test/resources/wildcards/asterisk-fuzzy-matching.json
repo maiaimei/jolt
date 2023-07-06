@@ -1,0 +1,25 @@
+{
+  "input": {
+    "rating": {
+      "primary": {
+        "value": 3
+      },
+      "quality": {
+        "value": 6
+      }
+    }
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "rating": {
+          // match primary
+          "pri*": {
+            "value": "primaryValue"
+          }
+        }
+      }
+    }
+  ]
+}
