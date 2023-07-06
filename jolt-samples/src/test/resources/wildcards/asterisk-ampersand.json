@@ -1,0 +1,26 @@
+{
+  "input": {
+    "rating": {
+      "primary": {
+        "value": 3
+      },
+      "quality": {
+        "value": 6
+      }
+    }
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "rating": {
+          // match all keys below "rating"
+          "*": {
+            // &1 = primary or quality
+            "value": "SecondaryRatings.&1.Value"
+          }
+        }
+      }
+    }
+  ]
+}

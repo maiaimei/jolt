@@ -1,0 +1,19 @@
+{
+  "input": {
+    "ST": {
+      "ST01": "850",
+      "ST02": "0001"
+    }
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "ST": {
+          "ST01": "ediX12TransactionSet.transactionSetIdentifierCode",
+          "ST02": "ediX12TransactionSet.transactionSetControlNumber"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "input": [
+    4,
+    2,
+    8,
+    7,
+    5
+  ],
+  "spec": [
+    {
+      "operation": "modify-overwrite-beta",
+      "spec": {
+        // 数组长度
+        "size": "=size(&2)",
+        // 取头取尾
+        "firstItem": "=firstElement(@(1,&1))",
+        "lastItem": "=lastElement(@(1,&1))",
+        // 取索引为2的数组元素
+        "itemAtIndex2": "=elementAt(2,@(1,&1))",
+        // 数组排序
+        "afterSorted": "=sort(@(1,&1))"
+      }
+    }
+  ]
+}

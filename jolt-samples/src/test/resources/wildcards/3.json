@@ -1,0 +1,24 @@
+{
+  "input": {
+    "jan": 10,
+    "feb": 20,
+    "mar": 30,
+    "apr": 40
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        // match all elements
+        "*": {
+          // grab the key of the data at this level in the tree
+          // and write it to month in the output
+          "$": "month",
+          // grab the value of the data at this level in the tree
+          // and write it to count in the output
+          "@": "count"
+        }
+      }
+    }
+  ]
+}

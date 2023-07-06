@@ -1,0 +1,15 @@
+{
+  "input": {
+    "id": 1,
+    "username": "admin",
+    "password": "12345"
+  },
+  "spec": [
+    {
+      "operation": "remove",
+      "spec": {
+        "password": ""
+      }
+    }
+  ]
+}

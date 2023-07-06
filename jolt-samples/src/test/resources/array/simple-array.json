@@ -1,0 +1,27 @@
+{
+  "input": {
+    "scores": [
+      4,
+      2,
+      8,
+      7,
+      5
+    ]
+  },
+  "spec": [
+    {
+      "operation": "modify-overwrite-beta",
+      "spec": {
+        // 数组长度
+        "scoresSize": "=size(@(1,scores))",
+        // 取头取尾
+        "firstScore": "=firstElement(@(1,scores))",
+        "lastScore": "=lastElement(@(1,scores))",
+        // 取索引为2的数组元素
+        "scoreAtIndex2": "=elementAt(2,@(1,scores))",
+        // 数组排序
+        "sortedScores": "=sort(@(1,scores))"
+      }
+    }
+  ]
+}

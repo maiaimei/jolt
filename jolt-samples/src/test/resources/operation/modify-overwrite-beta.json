@@ -1,0 +1,48 @@
+{
+  "input": {
+    "ST": {
+      "ST01": "850",
+      "ST02": "0001"
+    },
+    "DTM": {
+      "DTM01": "038",
+      "DTM02": "20230706"
+    }
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "ST": {
+          "ST01": "ediX12TransactionSet.transactionSetIdentifierCode",
+          "ST02": "ediX12TransactionSet.transactionSetControlNumber"
+        },
+        "DTM": {
+          "DTM02": "latestDate"
+        }
+      }
+    },
+    {
+      "operation": "modify-default-beta",
+      "spec": {
+        "extensionMap": {
+          "latestDateYear": "=substring(@(2,latestDate),0,4)",
+          "latestDateMonth": "=substring(@(2,latestDate),4,6)",
+          "latestDateDate": "=substring(@(2,latestDate),6,8)"
+        }
+      }
+    },
+    {
+      "operation": "modify-overwrite-beta",
+      "spec": {
+        "latestDate": "=concat(@(1,extensionMap.latestDateYear),'-',@(1,extensionMap.latestDateMonth),'-',@(1,extensionMap.latestDateDate))"
+      }
+    },
+    {
+      "operation": "remove",
+      "spec": {
+        "extensionMap": ""
+      }
+    }
+  ]
+}
