@@ -21,4 +21,9 @@ public class ArrayTest extends AbstractTest {
   void test_nested_array() {
     doTest("/array/nested-array.json");
   }
+
+  @Test
+  void test_declaredOutputArray() {
+    doTest("/array/declaredOutputArray.json");
+  }
 }

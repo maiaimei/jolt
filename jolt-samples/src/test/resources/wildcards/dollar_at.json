@@ -1,0 +1,20 @@
+{
+  "input": {
+    "foo": "bar"
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "*": {
+          "$": "key",
+          "@": "value"
+        }
+      }
+    }
+  ],
+  "expected": {
+    "key": "foo",
+    "value": "bar"
+  }
+}

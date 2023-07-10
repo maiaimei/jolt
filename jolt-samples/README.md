@@ -29,34 +29,31 @@ RHS，Right Hand Side， output data path
 
 ### '\*' Wildcard
 
-用在LHS侧：
+仅在LHS侧有效。
 
-- 匹配输入JSON的key，忽略已经被精准匹配过的key。
+用于匹配输入JSON的键。
 
-- 可以单独使用，也可以用于匹配键的一部分。
-- 在单独使用时，输入JSON的键值必须具有相同的格式。
+可以单独使用，在单独使用时，输入JSON的键值必须具有相同的格式。忽略已经被精准匹配的键。
+
+可以模糊匹配，如：`foo-*`匹配`foo-a`,`foo-b`等等。
 
 ### '&' Wildcard
 
-'&' 通配符有两个参数`&(0,1)`，第一个参数表示从当前层级回溯多少级去寻找输入JSON的key，第二个参数表示取第几个匹配到的结果（0表示取整体，1表示取第一个匹配结果，2表示取第二个匹配结果），第二个参数可省略，'&' = '&0' = '&(0)' = '&(0,0)'。
-
-用在LHS侧：
-
-用在RHS侧：
+'&' 通配符有两个参数`&(0,1)`，第一个参数表示从当前层级回溯多少级去寻找输入JSON的键，第二个参数表示取第几个匹配到的结果（0表示取整体，1表示取第一个匹配结果，2表示取第二个匹配结果），第二个参数可省略，'&' = '&0' = '&(0)' = '&(0,0)'。
 
 ### '$' Wildcard
 
-Valid only on the LHS of the spec.
+Valid only on the LHS of the spec. Copy the input JSON "key" as the data to be output.
 
-用在LHS侧
+仅在LHS侧有效。
 
-取输入JSON的key
+用于获取输入JSON的键，作为输出JSON的值，'$' = '$0' = '$(0)' = '$(0,0)'。
 
-$0=$，当前层级
+### '@' Wildcard
 
-$1，向上1级
+Valid on both sides of the spec.
 
-$2，向上2级
+This wildcard is necessary if you want to put both the input value and the input key somewhere in the output JSON.
 
 ### '#' Wildcard
 
@@ -75,31 +72,6 @@ This 'or' wildcard allows you to match multiple input keys.
 	// match "rating" or "Rating" copy the data to "rating-primary" 
 	"rating|Rating" : "rating-primary"
 }
-```
-
-### '@' Wildcard
-
-Valid on both sides of the spec.
-
-The basic '@' on the LHS.
-
-This wildcard is necessary if you want to put both the input value and the input key somewhere in the output JSON.
-
-```json
-[
-    {
-        "operation": "shift",
-        "spec": {
-            // match all input JSON keys 
-            "*": {
-                // copy the key of the data at this level in the tree, to the output
-                "$": "place.to.put.key",
-                // copy the value of the data at this level in the tree, to the output
-                "@": "place.to.put.value"
-            }
-        }
-    }
-]
 ```
 
 # default

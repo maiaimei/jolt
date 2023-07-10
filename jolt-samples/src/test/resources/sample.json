@@ -1,0 +1,13 @@
+{
+  "input": {
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+      }
+    }
+  ],
+  "expected": {
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "input": {
+    "rating": {
+      "primary": {
+        "value": 3,
+        "max": 5
+      },
+      "quality": {
+        "value": 3,
+        "max": 7
+      }
+    }
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "rating": {
+          // match all keys below "rating"
+          "*": {
+            // output each of the "keys" to "ratings" in the output 
+            // '$' = '$0' = '$(0)' = '$(0,0)'
+            "$(0,0)": "ratings"
+          }
+        }
+      }
+    }
+  ],
+  "expected": {
+    "ratings": [
+      "primary",
+      "quality"
+    ]
+  }
+}

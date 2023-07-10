@@ -1,0 +1,29 @@
+{
+  "input": {
+    "foo-a": "A",
+    "foo-b": "B"
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "foo-*": {
+          "$": "[].k1",
+          "@": "[]"
+        }
+      }
+    }
+  ],
+  "expected": [
+    {
+      "k1": "foo-a",
+      "k2": "a",
+      "value": "A"
+    },
+    {
+      "k1": "foo-b",
+      "k2": "b",
+      "value": "B"
+    }
+  ]
+}
