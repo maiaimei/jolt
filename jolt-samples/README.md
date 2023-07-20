@@ -39,6 +39,8 @@ RHS，Right Hand Side， output data path
 
 ### '&' Wildcard
 
+Valid on the LHS (left hand side - input JSON keys) and RHS (output data path)
+
 '&' 通配符有两个参数`&(0,1)`，第一个参数表示从当前层级回溯多少级去寻找输入JSON的键，第二个参数表示取第几个匹配到的结果（0表示取整体，1表示取第一个匹配结果，2表示取第二个匹配结果），第二个参数可省略，'&' = '&0' = '&(0)' = '&(0,0)'。
 
 ### '$' Wildcard
@@ -60,6 +62,14 @@ This wildcard is necessary if you want to put both the input value and the input
 Valid both on the LHS and RHS, but has different behavior / format on either side.
 
 On the RHS of the spec, # is only valid in the the context of an array, like "[#2]".
+
+```json
+"hidden" : {
+    "true" : {                             // if the value of "hidden" is true
+        "#disabled" : "clients.clientId"   // write the word "disabled" to the path "clients.clientId"
+    }
+}
+```
 
 ### '|' Wildcard
 

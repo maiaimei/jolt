@@ -1,0 +1,38 @@
+{
+  "input": {
+    "BEG": {
+      "BEG01": "04"
+    }
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "BEG": {
+          "BEG01": {
+            "00": {
+              "#Original": "type"
+            },
+            "01": {
+              "#Cancellation": "type"
+            },
+            "02": {
+              "#Add": "type"
+            },
+            "03": {
+              "#Delete": "type"
+            },
+            "04": {
+              "#Change": "type"
+            },
+            "05": {
+              "#Replace": "type"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "expected": {
+  }
+}
