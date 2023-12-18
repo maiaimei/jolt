@@ -1,0 +1,49 @@
+{
+  "input": {
+    //"createDate": "9/2/2023"
+    //"createDate": "9/2"
+    "createDate": "9"
+  },
+  "spec": [
+    {
+      // This variant of modifier only writes when the key/index is missing
+      "operation": "modify-define-beta",
+      "spec": {
+        "createDateList": "=split('/',@(1,createDate))"
+      }
+    },
+    {
+      // This variant of modifier only writes when the key/index is missing or the value is null
+      "operation": "modify-default-beta",
+      "spec": {
+        // Given an index at arg[0], and a list at arg[1] or args[1...N], return element at index of list or array
+        "createDateYear": "=elementAt(2,@(1,createDateList))",
+        "createDateMonth": "=elementAt(0,@(1,createDateList))",
+        "createDateDate": "=elementAt(1,@(1,createDateList))"
+      }
+    },
+    {
+      // This variant of modifier creates the key/index is missing, and overwrites the value if present
+      "operation": "modify-overwrite-beta",
+      "spec": {
+        "createDateMonth": "=leftPad(@(1,createDateMonth),2,'0')",
+        "createDateDate": "=leftPad(@(1,createDateDate),2,'0')"
+      }
+    },
+    {
+      "operation": "modify-overwrite-beta",
+      "spec": {
+        "createDate": "=join('/',@(1,createDateMonth),@(1,createDateDate),@(1,createDateYear))"
+      }
+    },
+    {
+      "operation": "remove",
+      "spec": {
+        "createDateList": "",
+        "createDateYear": "",
+        "createDateMonth": "",
+        "createDateDate": ""
+      }
+    }
+  ]
+}

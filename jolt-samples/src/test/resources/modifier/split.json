@@ -1,0 +1,13 @@
+{
+  "input": {
+    "createDate": "9/15/2023"
+  },
+  "spec": [
+    {
+      "operation": "modify-overwrite-beta",
+      "spec": {
+        "createDateList": "=split('/',@(1,createDate))"
+      }
+    }
+  ]
+}
