@@ -1,26 +1,24 @@
 {
   "input": {
-    "ST": {
-      "ST01": "850"
-    }
+    "username": "admin",
+    "password": "",
+    "deleted": null
   },
   "spec": [
     {
-      "operation": "shift",
-      "spec": {
-        "ST": {
-          "ST01": "ediX12TransactionSet.transactionSetIdentifierCode"
-        }
-      }
-    },
-    {
       "operation": "modify-default-beta",
       "spec": {
-        "ediX12TransactionSet": {
-          "transactionSetIdentifierCode": "N/A",
-          "transactionSetControlNumber": "0001"
-        }
+        "username": "administrator",
+        "password": "123456",
+        "deleted": 0,
+        "enabled": 1
       }
     }
-  ]
+  ],
+  "expected": {
+    "username": "admin",
+    "password": "",
+    "deleted": 0,
+    "enabled": 1
+  }
 }

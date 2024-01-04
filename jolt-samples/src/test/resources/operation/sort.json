@@ -1,13 +1,17 @@
 {
   "input": {
-    "id": 1,
     "username": "admin",
-    "nickname": "超级管理员",
-    "password": "12345"
+    "password": "",
+    "deleted": null
   },
   "spec": [
     {
       "operation": "sort"
     }
-  ]
+  ],
+  "expected": {
+    "deleted": null,
+    "password": "",
+    "username": "admin"
+  }
 }

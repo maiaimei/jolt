@@ -6,7 +6,7 @@
   },
   "spec": [
     {
-      "operation": "default",
+      "operation": "modify-define-beta",
       "spec": {
         "username": "administrator",
         "password": "123456",
@@ -18,7 +18,7 @@
   "expected": {
     "username": "admin",
     "password": "",
-    "deleted": 0,
+    "deleted": null,
     "enabled": 1
   }
 }

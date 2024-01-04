@@ -1,0 +1,36 @@
+{
+  "input": {
+    "k1": null,
+    "k2": "",
+    "k3": "3"
+  },
+  "spec": [
+    {
+      "operation": "modify-overwrite-beta",
+      "spec": {
+        "k1": [
+          "=isPresent",
+          "v1"
+        ],
+        "k2": [
+          "=isPresent",
+          "v2"
+        ],
+        "k3": [
+          "=isPresent",
+          "v3"
+        ],
+        "k4": [
+          "=isPresent",
+          "v4"
+        ]
+      }
+    }
+  ],
+  "expected": {
+    "k1": null,
+    "k2": "",
+    "k3": "3",
+    "k4": "v4"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "input": {
+    "k1": null,
+    "k2": "",
+    "k3": "3"
+  },
+  "spec": [
+    {
+      "operation": "modify-default-beta",
+      "spec": {
+        "k1": "v1"
+      }
+    },
+    {
+      "operation": "modify-overwrite-beta",
+      "spec": {
+        "k1": [
+          "=isNull",
+          "v1"
+        ],
+        "k2": [
+          "=isNull",
+          "v2"
+        ],
+        "k3": [
+          "=isNull",
+          "v3"
+        ],
+        "k4": [
+          "=isNull",
+          "v4"
+        ]
+      }
+    }
+  ],
+  "expected": {
+    "k1": null,
+    "k2": "v2",
+    "k3": "v3",
+    "k4": "v4"
+  }
+}

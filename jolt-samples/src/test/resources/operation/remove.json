@@ -1,15 +1,19 @@
 {
   "input": {
-    "id": 1,
     "username": "admin",
-    "password": "12345"
+    "password": "",
+    "deleted": null
   },
   "spec": [
     {
       "operation": "remove",
       "spec": {
-        "password": ""
+        "deleted": ""
       }
     }
-  ]
+  ],
+  "expected": {
+    "username": "admin",
+    "password": ""
+  }
 }
