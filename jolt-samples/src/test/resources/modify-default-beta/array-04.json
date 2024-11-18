@@ -1,0 +1,31 @@
+{
+  "input": [
+    {
+      "msgId": "123",
+      "fileName": "test.xml",
+      "status": "200"
+    },
+    {
+      "status": "500"
+    }
+  ],
+  "spec": [
+    {
+      "operation": "",
+      "spec": {
+      }
+    }
+  ],
+  "expected": [
+    {
+      "msgId": "123",
+      "fileName": "test.xml",
+      "status": "200"
+    },
+    {
+      "msgId": "123",
+      "fileName": "test.xml",
+      "status": "500"
+    }
+  ]
+}

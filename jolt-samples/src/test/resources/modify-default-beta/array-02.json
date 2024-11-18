@@ -1,0 +1,24 @@
+{
+  "input": [
+    {
+      "p1": "v1",
+      "p2": null
+    }
+  ],
+  "spec": [
+    {
+      "operation": "modify-default-beta",
+      "spec": {
+        "*": {
+          "p2": "v2"
+        }
+      }
+    }
+  ],
+  "expected": [
+    {
+      "p1": "v1",
+      "p2": "v2"
+    }
+  ]
+}
