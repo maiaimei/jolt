@@ -2,7 +2,7 @@ package cn.maiaimei.example;
 
 import org.junit.jupiter.api.Test;
 
-public class ArrayTest extends AbstractTest {
+public class ArrayJoltTest extends AbstractJoltTest {
 
   @Test
   void test_simple_array() {

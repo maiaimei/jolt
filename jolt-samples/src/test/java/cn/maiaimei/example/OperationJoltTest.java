@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 /**
  * {@link ChainrEntry}
  */
-public class OperationTest extends AbstractTest {
+public class OperationJoltTest extends AbstractJoltTest {
 
   @Test
   void test_shift() {

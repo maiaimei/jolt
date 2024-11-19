@@ -4,7 +4,7 @@ import com.bazaarvoice.jolt.Chainr;
 import com.bazaarvoice.jolt.JsonUtils;
 import java.util.Map;
 
-public abstract class AbstractTest {
+public abstract class AbstractJoltTest {
 
   protected void doTest(String pathname) {
     Map<String, Object> testUnit = JsonUtils.classpathToMap(pathname);

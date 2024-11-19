@@ -2,7 +2,7 @@ package cn.maiaimei.example;
 
 import org.junit.jupiter.api.Test;
 
-public class WildcardsTest extends AbstractTest {
+public class WildcardsJoltTest extends AbstractJoltTest {
 
   @Test
   void test_dollar() {

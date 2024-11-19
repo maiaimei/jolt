@@ -3,15 +3,9 @@ package cn.maiaimei.example;
 import org.junit.jupiter.api.Test;
 
 /**
- * modify-default-beta 修改-默认，当左手边不存在或是为空的时候进行转换。
- * <p>
- * 左手边
- * <p>
- * 不存在：即没有该属性
- * <p>
- * 空：null，不包括空串
+ * modify-default-beta 修改-默认，当左手边不存在（没有该属性）或是为空（null，不包括空串）的时候进行转换。
  */
-public class ModifyDefaultBetaTest extends AbstractTest {
+public class ModifyDefaultBetaJoltTest extends AbstractJoltTest {
 
   /**
    * modify-default-beta 修改-默认，当左手边不存在的时候设置默认值。
@@ -59,11 +53,6 @@ public class ModifyDefaultBetaTest extends AbstractTest {
   @Test
   void test_array_03() {
     doTest("/modify-default-beta/array-03.json");
-  }
-
-  @Test
-  void test_array_04() {
-    doTest("/modify-default-beta/array-04.json");
   }
 
 }

@@ -1,0 +1,47 @@
+{
+  "input": {
+    "header": {
+      "msgId": "12345"
+    },
+    "transactions": [
+      {
+        "tranNum": "T1",
+        "tranStatus": "ACCT"
+      },
+      {
+        "tranNum": "T2",
+        "tranStatus": "REJT"
+      }
+    ]
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "transactions": {
+          // * 表示数组索引
+          "*": {
+            // @ 表示数组元素的键名
+            "@": "[]",
+            // 从当前层级（数组元素键名所在层级）回溯2级去寻找键名为header的JSON
+            "@(2,header)": {
+              "msgId": "[&1].msgId"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "expected": [
+    {
+      "msgId": "12345",
+      "tranNum": "T1",
+      "tranStatus": "ACCT"
+    },
+    {
+      "msgId": "12345",
+      "tranNum": "T2",
+      "tranStatus": "REJT"
+    }
+  ]
+}

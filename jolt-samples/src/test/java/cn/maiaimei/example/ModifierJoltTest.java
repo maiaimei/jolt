@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 /**
  * see {@link ChainrEntry} and {@link Modifier}
  */
-public class ModifierTest extends AbstractTest {
+public class ModifierJoltTest extends AbstractJoltTest {
 
   @Test
   void test_isPresent() {
