@@ -1,0 +1,17 @@
+{
+  "input": {
+    "OnglMsgId": "12345678",
+    "OnglMsgNmId": "test.xml"
+  },
+  "spec": [
+    {
+      "operation": "shift",
+      "spec": {
+        "OnglMsgId": "messageId",
+        "OnglMsgNmId": "messageFilename"
+      }
+    }
+  ],
+  "expected": {
+  }
+}

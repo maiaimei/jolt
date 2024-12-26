@@ -8,12 +8,6 @@ import org.junit.jupiter.api.Test;
  */
 public class OperationJoltTest extends AbstractJoltTest {
 
-  @Test
-  void test_shift() {
-    // TODO: shift.json
-    doTest("/operation/shift.json");
-  }
-
   /**
    * default：功能类似 modify-default-beta ，两者有什么区别？
    */
