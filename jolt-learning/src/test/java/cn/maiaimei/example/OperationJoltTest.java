@@ -6,14 +6,14 @@ import org.junit.jupiter.api.Test;
 /**
  * {@link ChainrEntry}
  */
-public class OperationJoltTest extends AbstractJoltTest {
+public class OperationJoltTest extends BaseTest {
 
   /**
    * default：功能类似 modify-default-beta ，两者有什么区别？
    */
   @Test
   void test_default() {
-    doTest("/operation/default.json");
+    doTransform("/operations/default.json");
   }
 
   /**
@@ -21,7 +21,7 @@ public class OperationJoltTest extends AbstractJoltTest {
    */
   @Test
   void test_modify_overwrite_beta() {
-    doTest("/operation/modify-overwrite-beta.json");
+    doTransform("/operations/modify-overwrite-beta.json");
   }
 
   /**
@@ -29,7 +29,7 @@ public class OperationJoltTest extends AbstractJoltTest {
    */
   @Test
   void test_modify_default_beta() {
-    doTest("/operation/modify-default-beta.json");
+    doTransform("/operations/modify-default-beta.json");
   }
 
   /**
@@ -37,16 +37,16 @@ public class OperationJoltTest extends AbstractJoltTest {
    */
   @Test
   void test_modify_define_beta() {
-    doTest("/operation/modify-define-beta.json");
+    doTransform("/operations/modify-define-beta.json");
   }
 
   @Test
   void test_remove() {
-    doTest("/operation/remove.json");
+    doTransform("/operations/remove.json");
   }
 
   @Test
   void test_sort() {
-    doTest("/operation/sort.json");
+    doTransform("/operations/sort.json");
   }
 }

@@ -2,11 +2,11 @@ package cn.maiaimei.example;
 
 import org.junit.jupiter.api.Test;
 
-public class ArrayJoltTest extends AbstractJoltTest {
+public class ArrayJoltTest extends BaseTest {
 
   @Test
   void test_simple_array() {
-    doTest("/array/simple-array.json");
+    doTransform("/array/simple-array.json");
   }
 
   /**
@@ -14,16 +14,16 @@ public class ArrayJoltTest extends AbstractJoltTest {
    */
   @Test
   void test_anonymous_array() {
-    doTest("/array/anonymous-array.json");
+    doTransform("/array/anonymous-array.json");
   }
 
   @Test
   void test_nested_array() {
-    doTest("/array/nested-array.json");
+    doTransform("/array/nested-array.json");
   }
 
   @Test
   void test_declaredOutputArray() {
-    doTest("/array/declaredOutputArray.json");
+    doTransform("/array/declaredOutputArray.json");
   }
 }

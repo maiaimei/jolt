@@ -7,34 +7,34 @@ import org.junit.jupiter.api.Test;
 /**
  * see {@link ChainrEntry} and {@link Modifier}
  */
-public class ModifierJoltTest extends AbstractJoltTest {
+public class ModifierJoltTest extends BaseTest {
 
   @Test
   void test_isPresent() {
-    doTest("/modifier/isPresent.json");
+    doTransform("/modifier/isPresent.json");
   }
 
   @Test
   void test_isNull() {
-    doTest("/modifier/isNull.json");
+    doTransform("/modifier/isNull.json");
     System.out.println("--------------------");
-    doTest("/modifier/isNull2.json");
+    doTransform("/modifier/isNull2.json");
   }
 
   @Test
   void test_notNull() {
-    doTest("/modifier/notNull.json");
+    doTransform("/modifier/notNull.json");
   }
 
   @Test
   void test_split_date() {
     // "9/15/2023" -> ["9","15","2023"]
-    doTest("/modifier/split-date.json");
+    doTransform("/modifier/split-date.json");
   }
 
   @Test
   void test_format_date() {
     // "9/2/2023" -> "09/02/2023"
-    doTest("/modifier/format-date.json");
+    doTransform("/modifier/format-date.json");
   }
 }

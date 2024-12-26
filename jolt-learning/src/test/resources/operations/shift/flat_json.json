@@ -13,5 +13,7 @@
     }
   ],
   "expected": {
+    "messageId": "12345678",
+    "messageFilename": "test.xml"
   }
 }
